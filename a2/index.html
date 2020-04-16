@@ -23,7 +23,7 @@
     />
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target=".navbar" data-offset="100">
     <!-- Header -->
     <header>
       <nav class="navbar navbar-dark bg-dark">
@@ -44,16 +44,16 @@
     <nav class="navbar sticky-top navbar-expand navbar-dark bg-dark">
       <div class="navbar" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
+          <li class="nav-item">
+            <a class="nav-link" href="#about-us"
               >About Us <span class="sr-only">(current)</span></a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Prices</a>
+            <a class="nav-link" href="#prices">Prices</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Now Showing</a>
+            <a class="nav-link" href="#now-showing">Now Showing</a>
           </li>
         </ul>
       </div>
@@ -116,7 +116,7 @@
       </section>
 
       <section id="prices">
-        <div class="jumbotron p-md-4 p-xl-5" style="background-color: #ffffff;">
+        <div class="container pt-3">
           <h1>Prices</h1>
           <table class="table table-sm table-hover table-bordered">
             <thead class="thead-dark">
@@ -219,8 +219,8 @@
         </div>
       </section>
 
-      <section id="now-showing">
-        <div class="jumbotron p-xl-5">
+      <section id="now-showing" style="background-color: #f4f6f8;">
+        <div class="container pt-3">
           <h1>Now Showing</h1>
           <div class="p-3">
             <div class="row justify-content-around">
@@ -287,6 +287,44 @@
           </div>
         </div>
       </section>
+
+      <section id="synopsis">
+        <div class="container mt-3">
+          <div class="row">
+            <div class="col-12">
+              <h1>Sypnosis</h1>
+            </div>
+            <div class="col-md-6 mt-2">
+              <div class="movie-detail">
+                <div class="d-flex flex-row justify-content-between">
+                  <h3>Avengers: Endgame</h3>
+                  <h3>PG</h3>
+                </div>
+                <p>
+                  The grave course of events set in motion by Thanos that wiped
+                  out half the universe and fractured the Avengers ranks compels
+                  the remaining Avengers to take one final stand in Marvel
+                  Studios' grand conclusion to twenty-two films, "Avengers:
+                  Endgame."
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 mt-2">
+              <iframe
+                width="100%"
+                height="220"
+                src="https://www.youtube.com/embed/TcMBFSGVi1c"
+              >
+              </iframe>
+            </div>
+            <div class="col-12">
+              <b>Make a Booking:</b>
+              <span class="badge badge-primary">Wed - Fri: 9pm</span>
+              <span class="badge badge-primary">Sat - Sun: 6pm</span>
+            </div>
+          </div>
+        </div>
+      </section>
       <article id="Website Under Construction">
         <!-- Creative Commons image sourced from https://pixabay.com/en/maintenance-under-construction-2422173/ and used for educational purposes only -->
         <img
@@ -296,24 +334,26 @@
       </article>
     </main>
 
-    <footer>
-      <div>
-        &copy;
-        <script>
-          document.write(new Date().getFullYear());
-        </script>
-        Put your name(s), student number(s) and group name here. Last modified
-        <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.
-      </div>
-      <div>
-        Disclaimer: This website is not a real website and is being developed as
-        part of a School of Science Web Programming course at RMIT University in
-        Melbourne, Australia.
-      </div>
-      <div>
-        <button id="toggleWireframeCSS" onclick="toggleWireframe()">
-          Toggle Wireframe CSS
-        </button>
+    <footer class="bg-dark">
+      <div class="container p-3" style="color: #ffffff;">
+        <div>
+          &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Pham Quang Man - s3804811. Last modified
+          <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.
+        </div>
+        <div>
+          Disclaimer: This website is not a real website and is being developed
+          as part of a School of Science Web Programming course at RMIT
+          University in Melbourne, Australia.
+        </div>
+        <div>
+          <button id="toggleWireframeCSS" onclick="toggleWireframe()">
+            Toggle Wireframe CSS
+          </button>
+        </div>
       </div>
     </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
