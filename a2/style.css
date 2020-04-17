@@ -1,4 +1,7 @@
 /* Insert your styles here */
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
 }
