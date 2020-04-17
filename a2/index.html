@@ -60,6 +60,76 @@
     </nav>
     <main>
       <section id="about-us">
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="exampleModalCenter"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalCenterTitle"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">
+                  New Seats Available!
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="card-deck">
+                  <div class="card">
+                    <img
+                      class="card-img-top"
+                      src="./standard.jpg"
+                      alt="Card image cap"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Standard Seats</h5>
+                      <p class="card-text">
+                        <i>"If it ain't broke, dont't fix it!"</i><br />The good
+                        old standard seat will provide the cinematic experience
+                        you've always enjoyed.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img
+                      class="card-img-top"
+                      src="./firstclass.jpg"
+                      alt="Card image cap"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">First Class Seats</h5>
+                      <p class="card-text">
+                        Redefining cinema luxury, this seat features fully
+                        reclinable seat, providing the ultimate first class
+                        cinema experience.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- About us -->
         <div
           id="carouselExampleIndicators"
@@ -83,15 +153,41 @@
                 alt="First slide"
               />
               <div class="carousel-caption">
-                <h5>We welcome all customer with</h5>
-                <p>The renovation was successful</p>
+                <h5>After extensive renovations, we have finally reopened!</h5>
+                <p>Scroll through the next slides to find out what's new</p>
               </div>
             </div>
             <div class="carousel-item">
               <img class="d-block w-100" src="./seats.jpg" alt="Second slide" />
+              <div class="carousel-caption">
+                <h5>
+                  New seats available
+                </h5>
+                <button
+                  style="opacity: 0.8;"
+                  type="button"
+                  class="btn btn-primary"
+                  data-toggle="modal"
+                  data-target="#exampleModalCenter"
+                >
+                  Find out more
+                </button>
+              </div>
             </div>
             <div class="carousel-item">
               <img class="d-block w-100" src="./dolby.jpg" alt="Third slide" />
+              <div class="carousel-caption">
+                <h5>
+                  The projection and sound systems are upgraded with 3D Dolby
+                  Vision projection and Dolby Atmos sound.
+                </h5>
+                <a
+                  class="btn btn-primary"
+                  role="button"
+                  href="https://www.dolby.com/us/en/cinema/index.html"
+                  >Find out more</a
+                >
+              </div>
             </div>
           </div>
           <a
@@ -229,12 +325,14 @@
                   <div class="card-header border-0">
                     <img class="card-poster" src="./endgame.jpg" alt="" />
                   </div>
-                  <div class="card-block p-2 text-wrap">
+                  <div
+                    class="card-block p-2 text-wrap d-flex flex-column justify-content-between d-flex flex-column justify-content-between"
+                  >
                     <h4 class="card-title">Avengers: End game</h4>
                     <p class="card-text">
                       Wed - Fri: 9pm (T21) <br />Sat - Sun:6pm (T18)
                     </p>
-                    <a href="#" class="btn btn-primary">BUTTON</a>
+                    <p><i>Rated PG-13</i></p>
                   </div>
                 </div>
               </div>
@@ -243,12 +341,14 @@
                   <div class="card-header border-0">
                     <img class="card-poster" src="./topend.jpg" alt="" />
                   </div>
-                  <div class="card-block p-2 text-wrap">
+                  <div
+                    class="card-block p-2 text-wrap d-flex flex-column justify-content-between"
+                  >
                     <h4 class="card-title">Top End Wedding</h4>
                     <p class="card-text">
                       Mon - Tue: 6pm (T18) <br />Sat - Sun:3pm (T15)
                     </p>
-                    <a href="#" class="btn btn-primary">BUTTON</a>
+                    <p><i>Rated M</i></p>
                   </div>
                 </div>
               </div>
@@ -259,13 +359,15 @@
                   <div class="card-header border-0">
                     <img class="card-poster" src="./dumbo.png" alt="" />
                   </div>
-                  <div class="card-block p-2 text-wrap">
+                  <div
+                    class="card-block p-2 text-wrap d-flex flex-column justify-content-between"
+                  >
                     <h4 class="card-title">Dumbo</h4>
                     <p class="card-text">
                       Mon - Tue: 12pm (T12) <br />Wed - Fri: 6pm (T18) <br />Sat
                       - Sun:6pm (T18)
                     </p>
-                    <a href="#" class="btn btn-primary">BUTTON</a>
+                    <p><i>Rated PG</i></p>
                   </div>
                 </div>
               </div>
@@ -274,12 +376,14 @@
                   <div class="card-header border-0">
                     <img class="card-poster" src="./happy-prince.jpg" alt="" />
                   </div>
-                  <div class="card-block p-2 text-wrap">
+                  <div
+                    class="card-block p-2 text-wrap d-flex flex-column justify-content-between"
+                  >
                     <h4 class="card-title">The Happy Prince</h4>
                     <p class="card-text">
                       Wed - Fri: 12pm (T12) <br />Sat - Sun: 9pm (T21)
                     </p>
-                    <a href="#" class="btn btn-primary">BUTTON</a>
+                    <p><i>Rated R</i></p>
                   </div>
                 </div>
               </div>
@@ -298,7 +402,7 @@
               <div class="movie-detail">
                 <div class="d-flex flex-row justify-content-between">
                   <h3>Avengers: Endgame</h3>
-                  <h3>PG</h3>
+                  <h4>PG-13</h4>
                 </div>
                 <p>
                   The grave course of events set in motion by Thanos that wiped
