@@ -5,8 +5,23 @@ html {
 body {
   margin: 0;
 }
+
+.parallax {
+  background-image: url("popcorn.jpg");
+
+  /* Set a specific height */
+  height: 100%;
+  width: 100vw;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: stretch;
+}
+
 .carousel-item img {
-  height: 85vh;
+  height: 100vh;
 }
 
 .card-poster {
@@ -15,16 +30,6 @@ body {
   object-fit: cover;
 }
 
-@media only screen and (max-device-width: 1366px) {
-  .parallax {
-    background-attachment: scroll;
-    /* Full height */
-    height: 100%;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+footer p {
+  margin: 0;
 }

@@ -35,13 +35,16 @@
             class="d-inline-block align-top"
             alt=""
           />
-          <span id="brand-name">Loco Cinema</span>
+          <span id="brand-name">Cinemax</span>
         </a>
         <span id="datetime" style="color: #ffffff;"></span>
       </nav>
     </header>
     <!-- Nav -->
-    <nav class="navbar sticky-top navbar-expand navbar-dark bg-dark">
+    <nav
+      class="navbar sticky-top navbar-expand navbar-dark bg-dark"
+      style="height: 45px;"
+    >
       <div class="navbar" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
@@ -60,6 +63,7 @@
     </nav>
     <main>
       <!-- About us -->
+
       <section id="about-us">
         <!-- modal -->
         <div
@@ -131,12 +135,15 @@
             </div>
           </div>
         </div>
-        <!-- About us -->
+
         <div
           id="carousel-indicator"
-          class="carousel slide"
+          class="carousel slide min-vh-100"
           data-ride="carousel"
         >
+          <div class="carousel-caption" style="top: 25px; bottom: auto;">
+            <h1>About Us</h1>
+          </div>
           <ol class="carousel-indicators">
             <li
               data-target="#carousel-indicator"
@@ -148,11 +155,7 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img
-                class="parallax d-block w-100"
-                src="./cinema.jpg"
-                alt="First slide"
-              />
+              <img class="d-block w-100" src="./cinema.jpg" alt="First slide" />
               <div class="carousel-caption">
                 <h5>After extensive renovations, we have finally reopened!</h5>
                 <p>Scroll through the next slides to find out what's new</p>
@@ -212,10 +215,15 @@
         </div>
       </section>
 
+      <!-- Prices -->
       <section id="prices">
-        <div class="container pt-3">
+        <div
+          class="container d-flex flex-column justify-content-center min-vh-100"
+        >
           <h1>Prices</h1>
-          <table class="table table-sm table-hover table-bordered">
+          <table
+            class="table table-secondary table-sm table-hover table-bordered"
+          >
             <thead class="thead-dark">
               <tr>
                 <th scope="col">Seat Type</th>
@@ -316,75 +324,120 @@
         </div>
       </section>
 
+      <!-- Now Showing -->
       <section id="now-showing" style="background-color: #f4f6f8;">
-        <div class="container pt-3">
-          <h1>Now Showing</h1>
-          <div class="p-3">
-            <div class="row justify-content-around">
-              <div class="col-md-6 col-sm-10 mb-3">
-                <div class="card flex-row">
-                  <div class="card-header border-0">
-                    <img class="card-poster" src="./endgame.jpg" alt="" />
+        <div class="parallax">
+          <div class="container pt-3 pb-3 min-vh-100">
+            <h1 style="color: #ffffff;">Now Showing</h1>
+            <div class="p-3">
+              <div class="row justify-content-around">
+                <div class="col-md-6 col-sm-10 mb-3">
+                  <div class="card flex-row">
+                    <div class="card-header border-0">
+                      <img class="card-poster" src="./endgame.jpg" alt="" />
+                    </div>
+                    <div
+                      class="card-block p-2 text-wrap d-flex flex-column justify-content-between d-flex flex-column justify-content-between"
+                    >
+                      <h4 class="card-title">Avengers: End game</h4>
+                      <p class="card-text">
+                        Wed - Fri: 9pm (T21) <br />Sat - Sun:6pm (T18)
+                      </p>
+                      <p><i>Rated PG-13</i></p>
+                    </div>
                   </div>
-                  <div
-                    class="card-block p-2 text-wrap d-flex flex-column justify-content-between d-flex flex-column justify-content-between"
-                  >
-                    <h4 class="card-title">Avengers: End game</h4>
-                    <p class="card-text">
-                      Wed - Fri: 9pm (T21) <br />Sat - Sun:6pm (T18)
-                    </p>
-                    <p><i>Rated PG-13</i></p>
+                </div>
+                <div class="col-md-6 col-sm-10 mb-3">
+                  <div class="card flex-row">
+                    <div class="card-header border-0">
+                      <img class="card-poster" src="./topend.jpg" alt="" />
+                    </div>
+                    <div
+                      class="card-block p-2 text-wrap d-flex flex-column justify-content-between"
+                    >
+                      <h4 class="card-title">Top End Wedding</h4>
+                      <p class="card-text">
+                        Mon - Tue: 6pm (T18) <br />Sat - Sun:3pm (T15)
+                      </p>
+                      <p><i>Rated M</i></p>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-sm-10 mb-3">
-                <div class="card flex-row">
-                  <div class="card-header border-0">
-                    <img class="card-poster" src="./topend.jpg" alt="" />
+              <div class="row justify-content-around">
+                <div class="col-md-6 col-sm-10 mb-3">
+                  <div class="card flex-row">
+                    <div class="card-header border-0">
+                      <img class="card-poster" src="./dumbo.png" alt="" />
+                    </div>
+                    <div
+                      class="card-block p-2 text-wrap d-flex flex-column justify-content-between"
+                    >
+                      <h4 class="card-title">Dumbo</h4>
+                      <p class="card-text">
+                        Mon - Tue: 12pm (T12) <br />Wed - Fri: 6pm (T18)
+                        <br />Sat - Sun:6pm (T18)
+                      </p>
+                      <p><i>Rated PG</i></p>
+                    </div>
                   </div>
-                  <div
-                    class="card-block p-2 text-wrap d-flex flex-column justify-content-between"
-                  >
-                    <h4 class="card-title">Top End Wedding</h4>
-                    <p class="card-text">
-                      Mon - Tue: 6pm (T18) <br />Sat - Sun:3pm (T15)
-                    </p>
-                    <p><i>Rated M</i></p>
+                </div>
+                <div class="col-md-6 col-sm-10 mb-3">
+                  <div class="card flex-row">
+                    <div class="card-header border-0">
+                      <img
+                        class="card-poster"
+                        src="./happy-prince.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="card-block p-2 text-wrap d-flex flex-column justify-content-between"
+                    >
+                      <h4 class="card-title">The Happy Prince</h4>
+                      <p class="card-text">
+                        Wed - Fri: 12pm (T12) <br />Sat - Sun: 9pm (T21)
+                      </p>
+                      <p><i>Rated R</i></p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="row justify-content-around">
-              <div class="col-md-6 col-sm-10 mb-3">
-                <div class="card flex-row">
-                  <div class="card-header border-0">
-                    <img class="card-poster" src="./dumbo.png" alt="" />
-                  </div>
-                  <div
-                    class="card-block p-2 text-wrap d-flex flex-column justify-content-between"
-                  >
-                    <h4 class="card-title">Dumbo</h4>
-                    <p class="card-text">
-                      Mon - Tue: 12pm (T12) <br />Wed - Fri: 6pm (T18) <br />Sat
-                      - Sun:6pm (T18)
-                    </p>
-                    <p><i>Rated PG</i></p>
-                  </div>
-                </div>
+            <!-- Sypnosis -->
+            <div class="card">
+              <div class="card-header">
+                <h2>Sypnosis</h2>
               </div>
-              <div class="col-md-6 col-sm-10 mb-3">
-                <div class="card flex-row">
-                  <div class="card-header border-0">
-                    <img class="card-poster" src="./happy-prince.jpg" alt="" />
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6 mt-2">
+                    <div class="movie-detail">
+                      <div class="d-flex flex-row justify-content-between">
+                        <h3>Avengers: Endgame</h3>
+                        <h4>PG-13</h4>
+                      </div>
+                      <p>
+                        The grave course of events set in motion by Thanos that
+                        wiped out half the universe and fractured the Avengers
+                        ranks compels the remaining Avengers to take one final
+                        stand in Marvel Studios' grand conclusion to twenty-two
+                        films, "Avengers: Endgame."
+                      </p>
+                    </div>
                   </div>
-                  <div
-                    class="card-block p-2 text-wrap d-flex flex-column justify-content-between"
-                  >
-                    <h4 class="card-title">The Happy Prince</h4>
-                    <p class="card-text">
-                      Wed - Fri: 12pm (T12) <br />Sat - Sun: 9pm (T21)
-                    </p>
-                    <p><i>Rated R</i></p>
+                  <div class="col-md-6 mt-2">
+                    <iframe
+                      width="100%"
+                      height="220"
+                      src="https://www.youtube.com/embed/TcMBFSGVi1c"
+                    >
+                    </iframe>
+                  </div>
+                  <div class="col-12">
+                    <b>Make a Booking:</b>
+                    <span class="badge badge-primary">Wed - Fri: 9pm</span>
+                    <span class="badge badge-primary">Sat - Sun: 6pm</span>
                   </div>
                 </div>
               </div>
@@ -393,60 +446,43 @@
         </div>
       </section>
 
-      <section id="synopsis">
-        <div class="container mt-3">
-          <div class="row">
-            <div class="col-12">
-              <h1>Sypnosis</h1>
-            </div>
-            <div class="col-md-6 mt-2">
-              <div class="movie-detail">
-                <div class="d-flex flex-row justify-content-between">
-                  <h3>Avengers: Endgame</h3>
-                  <h4>PG-13</h4>
-                </div>
-                <p>
-                  The grave course of events set in motion by Thanos that wiped
-                  out half the universe and fractured the Avengers ranks compels
-                  the remaining Avengers to take one final stand in Marvel
-                  Studios' grand conclusion to twenty-two films, "Avengers:
-                  Endgame."
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6 mt-2">
-              <iframe
-                width="100%"
-                height="220"
-                src="https://www.youtube.com/embed/TcMBFSGVi1c"
-              >
-              </iframe>
-            </div>
-            <div class="col-12">
-              <b>Make a Booking:</b>
-              <span class="badge badge-primary">Wed - Fri: 9pm</span>
-              <span class="badge badge-primary">Sat - Sun: 6pm</span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <article id="Website Under Construction">
-        <!-- Creative Commons image sourced from https://pixabay.com/en/maintenance-under-construction-2422173/ and used for educational purposes only -->
-        <img
-          src="../../media/website-under-construction.png"
-          alt="Website Under Construction"
-        />
-      </article>
+      <div class="container min-vh-100">
+        <article id="Website Under Construction">
+          <!-- Creative Commons image sourced from https://pixabay.com/en/maintenance-under-construction-2422173/ and used for educational purposes only -->
+          <img
+            src="https://cdn.pixabay.com/photo/2017/06/20/08/12/maintenance-2422173_1280.png"
+            alt="Website Under Construction"
+            style="width: 100%;"
+          />
+        </article>
+      </div>
     </main>
 
     <footer class="bg-dark">
       <div class="container p-3" style="color: #ffffff;">
         <div>
-          &copy;
-          <script>
-            document.write(new Date().getFullYear());
-          </script>
-          Pham Quang Man - s3804811. Last modified
+          <div class="d-flex flex-row justify-content-around mb-3">
+            <div>
+              &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              <p>cinemaxcustomersupport@email.com</p>
+              <p>(+84) 11332994</p>
+              <p>Broadway St</p>
+            </div>
+            <div>
+              <p>
+                Pham Quang Man
+              </p>
+              <p>s3804811</p>
+              <a href="https://github.com/ManPhamQuang/ManPhamQuang.github.io"
+                >github repo</a
+              >
+            </div>
+          </div>
+
+          Last modified
           <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.
         </div>
         <div>
