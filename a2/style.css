@@ -6,8 +6,16 @@ body {
   margin: 0;
 }
 
+#prices {
+  background-color: #2f2c34;
+}
+
+#navbar {
+  background-color: #e52729;
+}
+
 .parallax {
-  background-image: url("popcorn.jpg");
+  background-image: url("adult-bar-cafe-business-cinema-375885.jpg");
 
   /* Set a specific height */
   height: 100%;
@@ -17,7 +25,7 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: stretch;
+  background-size: cover;
 }
 
 .carousel-item img {

@@ -42,7 +42,8 @@
     </header>
     <!-- Nav -->
     <nav
-      class="navbar sticky-top navbar-expand navbar-dark bg-dark"
+      id="navbar"
+      class="navbar sticky-top navbar-expand navbar-dark"
       style="height: 45px;"
     >
       <div class="navbar" id="navbarSupportedContent">
@@ -61,7 +62,7 @@
         </ul>
       </div>
     </nav>
-    <main>
+    <main style="background-color: #2f2c34;">
       <!-- About us -->
 
       <section id="about-us">
@@ -216,11 +217,11 @@
       </section>
 
       <!-- Prices -->
-      <section id="prices">
+      <section id="prices" class="parallax">
         <div
           class="container d-flex flex-column justify-content-center min-vh-100"
         >
-          <h1>Prices</h1>
+          <h1 style="color: #ffffff;">Prices</h1>
           <table
             class="table table-secondary table-sm table-hover table-bordered"
           >
@@ -325,14 +326,17 @@
       </section>
 
       <!-- Now Showing -->
-      <section id="now-showing" style="background-color: #f4f6f8;">
-        <div class="parallax">
+      <section id="now-showing" style="background-color: #242228;">
+        <div>
           <div class="container pt-3 pb-3 min-vh-100">
             <h1 style="color: #ffffff;">Now Showing</h1>
             <div class="p-3">
               <div class="row justify-content-around">
                 <div class="col-md-6 col-sm-10 mb-3">
-                  <div class="card flex-row">
+                  <div
+                    class="card flex-row text-white"
+                    style="background-color: #2f2c34;"
+                  >
                     <div class="card-header border-0">
                       <img class="card-poster" src="./endgame.jpg" alt="" />
                     </div>
@@ -348,7 +352,10 @@
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-10 mb-3">
-                  <div class="card flex-row">
+                  <div
+                    class="card flex-row text-white"
+                    style="background-color: #2f2c34;"
+                  >
                     <div class="card-header border-0">
                       <img class="card-poster" src="./topend.jpg" alt="" />
                     </div>
@@ -366,7 +373,10 @@
               </div>
               <div class="row justify-content-around">
                 <div class="col-md-6 col-sm-10 mb-3">
-                  <div class="card flex-row">
+                  <div
+                    class="card flex-row text-white"
+                    style="background-color: #2f2c34;"
+                  >
                     <div class="card-header border-0">
                       <img class="card-poster" src="./dumbo.png" alt="" />
                     </div>
@@ -383,7 +393,10 @@
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-10 mb-3">
-                  <div class="card flex-row">
+                  <div
+                    class="card flex-row text-white"
+                    style="background-color: #2f2c34;"
+                  >
                     <div class="card-header border-0">
                       <img
                         class="card-poster"
@@ -405,8 +418,11 @@
               </div>
             </div>
             <!-- Sypnosis -->
-            <div class="card">
-              <div class="card-header">
+            <div class="card text-white" style="background-color: #2f2c34;">
+              <div
+                class="card-header"
+                style="border-bottom: 5px solid rgba(0, 0, 0, 0.125);"
+              >
                 <h2>Sypnosis</h2>
               </div>
               <div class="card-body">
@@ -450,7 +466,7 @@
         <article id="Website Under Construction">
           <!-- Creative Commons image sourced from https://pixabay.com/en/maintenance-under-construction-2422173/ and used for educational purposes only -->
           <img
-            src="https://cdn.pixabay.com/photo/2017/06/20/08/12/maintenance-2422173_1280.png"
+            src="./maintenance.png"
             alt="Website Under Construction"
             style="width: 100%;"
           />
@@ -458,7 +474,7 @@
       </div>
     </main>
 
-    <footer class="bg-dark">
+    <footer class="" style="background-color: #242228;">
       <div class="container p-3" style="color: #ffffff;">
         <div>
           <div class="d-flex flex-row justify-content-around mb-3">
