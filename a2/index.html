@@ -391,7 +391,7 @@
                                 <div class="col-md-6 col-sm-10 mb-3">
                                     <div
                                         class="card flex-row text-white"
-                                        id="moviePanelAEG"
+                                        id="moviePanelACT"
                                         style="background-color: #2f2c34;"
                                     >
                                         <div class="card-header border-0">
@@ -416,8 +416,8 @@
                                                 <a
                                                     class="btn btn-primary"
                                                     role="button"
-                                                    href="#sypnosis"
-                                                    onclick="chooseMovie('AEG')"
+                                                    href="#synopsis"
+                                                    onclick="chooseMovie('ACT')"
                                                 >
                                                     Description
                                                 </a>
@@ -428,7 +428,7 @@
                                 <div class="col-md-6 col-sm-10 mb-3">
                                     <div
                                         class="card flex-row text-white"
-                                        id="moviePanelTEW"
+                                        id="moviePanelRMC"
                                         style="background-color: #2f2c34;"
                                     >
                                         <div class="card-header border-0">
@@ -453,8 +453,8 @@
                                                 <a
                                                     class="btn btn-primary"
                                                     role="button"
-                                                    href="#sypnosis"
-                                                    onclick="chooseMovie('TEW')"
+                                                    href="#synopsis"
+                                                    onclick="chooseMovie('RMC')"
                                                 >
                                                     Description
                                                 </a>
@@ -467,7 +467,7 @@
                                 <div class="col-md-6 col-sm-10 mb-3">
                                     <div
                                         class="card flex-row text-white"
-                                        id="moviePanelDUM"
+                                        id="moviePanelANM"
                                         style="background-color: #2f2c34;"
                                     >
                                         <div class="card-header border-0">
@@ -491,8 +491,8 @@
                                                 <a
                                                     class="btn btn-primary"
                                                     role="button"
-                                                    href="#sypnosis"
-                                                    onclick="chooseMovie('DUM')"
+                                                    href="#synopsis"
+                                                    onclick="chooseMovie('ANM')"
                                                 >
                                                     Description
                                                 </a>
@@ -503,7 +503,7 @@
                                 <div class="col-md-6 col-sm-10 mb-3">
                                     <div
                                         class="card flex-row text-white"
-                                        id="moviePanelTHP"
+                                        id="moviePanelAHF"
                                         style="background-color: #2f2c34;"
                                     >
                                         <div class="card-header border-0">
@@ -528,8 +528,8 @@
                                                 <a
                                                     class="btn btn-primary"
                                                     role="button"
-                                                    href="#sypnosis"
-                                                    onclick="chooseMovie('THP')"
+                                                    href="#synopsis"
+                                                    onclick="chooseMovie('AHF')"
                                                 >
                                                     Description
                                                 </a>
@@ -539,11 +539,11 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Sypnosis -->
+                        <!-- Synopsis -->
                         <div
                             class="card text-white"
                             style="background-color: #2f2c34;"
-                            id="sypnosis"
+                            id="synopsis"
                         >
                             <div
                                 class="card-header"
@@ -552,23 +552,23 @@
                                         rgba(0, 0, 0, 0.125);
                                 "
                             >
-                                <h2>Sypnosis</h2>
+                                <h2>Synopsis</h2>
                             </div>
-                            <div class="card-body" id="synopsisAEG">
+                            <div class="card-body" id="synopsisACT">
                                 <div class="row">
                                     <div class="col-md-6 mt-2">
                                         <div class="movie-detail">
                                             <div
                                                 class="d-flex flex-row justify-content-between"
                                             >
-                                                <h3 id="movie-sypnosis-title">
+                                                <h3 id="movie-synopsis-title">
                                                     Avengers: Endgame
                                                 </h3>
-                                                <h4 id="movie-sypnosis-rating">
+                                                <h4 id="movie-synopsis-rating">
                                                     PG-13
                                                 </h4>
                                             </div>
-                                            <p id="movie-sypnosis-detail">
+                                            <p id="movie-synopsis-detail">
                                                 The grave course of events set
                                                 in motion by Thanos that wiped
                                                 out half the universe and
@@ -585,7 +585,7 @@
                                         <iframe
                                             width="100%"
                                             height="220"
-                                            id="movie-sypnosis-trailer"
+                                            id="movie-synopsis-trailer"
                                             src="https://www.youtube.com/embed/TcMBFSGVi1c"
                                         >
                                         </iframe>
@@ -593,38 +593,44 @@
                                     <div class="col-12">
                                         <b>Make a Booking:</b>
                                         <span class="badge badge-primary"
-                                            >Wed - Fri: 9pm</span
+                                            >Wed: 9pm (T21)</span
                                         >
                                         <span class="badge badge-primary"
-                                            >Sat - Sun: 6pm</span
+                                            >Thu: 9pm (T21)</span
+                                        >
+                                        <span class="badge badge-primary"
+                                            >Fri: 9pm (T21)</span
+                                        >
+                                        <span class="badge badge-primary"
+                                            >Sat: 6pm (T18)</span
+                                        >
+                                        <span class="badge badge-primary"
+                                            >Sun: 6pm (T18)</span
                                         >
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-body d-none" id="synopsisTEW">
+                            <div class="card-body d-none" id="synopsisRMC">
                                 <div class="row">
                                     <div class="col-md-6 mt-2">
                                         <div class="movie-detail">
                                             <div
                                                 class="d-flex flex-row justify-content-between"
                                             >
-                                                <h3 id="movie-sypnosis-title">
+                                                <h3 id="movie-synopsis-title">
                                                     Top End Wedding
                                                 </h3>
-                                                <h4 id="movie-sypnosis-rating">
-                                                    PG-13
+                                                <h4 id="movie-synopsis-rating">
+                                                    M
                                                 </h4>
                                             </div>
-                                            <p id="movie-sypnosis-detail">
-                                                The grave course of events set
-                                                in motion by Thanos that wiped
-                                                out half the universe and
-                                                fractured the Avengers ranks
-                                                compels the remaining Avengers
-                                                to take one final stand in
-                                                Marvel Studios' grand conclusion
-                                                to twenty-two films, "Avengers:
-                                                Endgame."
+                                            <p id="movie-synopsis-detail">
+                                                Lauren and Ned have 10 days to
+                                                find Lauren's mother who has
+                                                gone AWOL in the remote far
+                                                north of Australia so that they
+                                                can reunite her parents and pull
+                                                off their dream wedding.
                                             </p>
                                         </div>
                                     </div>
@@ -632,46 +638,59 @@
                                         <iframe
                                             width="100%"
                                             height="220"
-                                            id="movie-sypnosis-trailer"
-                                            src="https://www.youtube.com/embed/TcMBFSGVi1c"
+                                            id="movie-synopsis-trailer"
+                                            src="https://www.youtube.com/embed/uoDBvGF9pPU"
                                         >
                                         </iframe>
                                     </div>
                                     <div class="col-12">
                                         <b>Make a Booking:</b>
                                         <span class="badge badge-primary"
-                                            >Wed - Fri: 9pm</span
+                                            >Mon: 6pm (T18)</span
                                         >
                                         <span class="badge badge-primary"
-                                            >Sat - Sun: 6pm</span
+                                            >Tue: 6pm (T18)</span
+                                        >
+                                        <span class="badge badge-primary"
+                                            >Sat: 3pm (T15)</span
+                                        >
+                                        <span class="badge badge-primary"
+                                            >Sun: 3pm (T15)</span
                                         >
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-body d-none" id="synopsisDUM">
+                            <div class="card-body d-none" id="synopsisANM">
                                 <div class="row">
                                     <div class="col-md-6 mt-2">
                                         <div class="movie-detail">
                                             <div
                                                 class="d-flex flex-row justify-content-between"
                                             >
-                                                <h3 id="movie-sypnosis-title">
+                                                <h3 id="movie-synopsis-title">
                                                     Dumbo
                                                 </h3>
-                                                <h4 id="movie-sypnosis-rating">
-                                                    PG-13
+                                                <h4 id="movie-synopsis-rating">
+                                                    PG
                                                 </h4>
                                             </div>
-                                            <p id="movie-sypnosis-detail">
-                                                The grave course of events set
-                                                in motion by Thanos that wiped
-                                                out half the universe and
-                                                fractured the Avengers ranks
-                                                compels the remaining Avengers
-                                                to take one final stand in
-                                                Marvel Studios' grand conclusion
-                                                to twenty-two films, "Avengers:
-                                                Endgame."
+                                            <p id="movie-synopsis-detail">
+                                                A young circus elephant is born
+                                                with comically large ears and
+                                                given the cruel nickname Dumbo.
+                                                One day at a show, he is taunted
+                                                by a group of kids, inciting his
+                                                mother into a rage that gets her
+                                                locked up. After Dumbo's ears
+                                                cause an accident that injures
+                                                many of the other elephants, he
+                                                is made to dress like a clown
+                                                and perform dangerous stunts.
+                                                Everything changes when Dumbo
+                                                discovers that his enormous ears
+                                                actually allow him to fly, and
+                                                he astounds everyone at the
+                                                circus with his new talent.
                                             </p>
                                         </div>
                                     </div>
@@ -679,46 +698,59 @@
                                         <iframe
                                             width="100%"
                                             height="220"
-                                            id="movie-sypnosis-trailer"
-                                            src="https://www.youtube.com/embed/TcMBFSGVi1c"
+                                            id="movie-synopsis-trailer"
+                                            src="https://www.youtube.com/embed/7NiYVoqBt-8"
                                         >
                                         </iframe>
                                     </div>
                                     <div class="col-12">
                                         <b>Make a Booking:</b>
                                         <span class="badge badge-primary"
-                                            >Wed - Fri: 9pm</span
+                                            >Mon: 12pm (T12)</span
                                         >
                                         <span class="badge badge-primary"
-                                            >Sat - Sun: 6pm</span
+                                            >Tue: 12pm (T12)</span
+                                        >
+                                        <span class="badge badge-primary"
+                                            >Wed: 6pm (T18)</span
+                                        >
+                                        <span class="badge badge-primary"
+                                            >Thu: 6pm (T18)</span
+                                        >
+                                        <span class="badge badge-primary"
+                                            >Fri: 6pm (T18)</span
+                                        >
+                                        <span class="badge badge-primary"
+                                            >Sat: 12pm (T12)</span
+                                        >
+                                        <span class="badge badge-primary"
+                                            >Sun: 12pm (T12)</span
                                         >
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-body d-none" id="synopsisTHP">
+                            <div class="card-body d-none" id="synopsisAHF">
                                 <div class="row">
                                     <div class="col-md-6 mt-2">
                                         <div class="movie-detail">
                                             <div
                                                 class="d-flex flex-row justify-content-between"
                                             >
-                                                <h3 id="movie-sypnosis-title">
+                                                <h3 id="movie-synopsis-title">
                                                     The Happy Prince
                                                 </h3>
-                                                <h4 id="movie-sypnosis-rating">
-                                                    PG-13
+                                                <h4 id="movie-synopsis-rating">
+                                                    R
                                                 </h4>
                                             </div>
-                                            <p id="movie-sypnosis-detail">
-                                                The grave course of events set
-                                                in motion by Thanos that wiped
-                                                out half the universe and
-                                                fractured the Avengers ranks
-                                                compels the remaining Avengers
-                                                to take one final stand in
-                                                Marvel Studios' grand conclusion
-                                                to twenty-two films, "Avengers:
-                                                Endgame."
+                                            <p id="movie-synopsis-detail">
+                                                His body ailing, Oscar Wilde
+                                                lives out his last days in
+                                                exile, observing the
+                                                difficulties and failures
+                                                surrounding him with ironic
+                                                detachment, humour, and the wit
+                                                that defined his life.
                                             </p>
                                         </div>
                                     </div>
@@ -726,18 +758,27 @@
                                         <iframe
                                             width="100%"
                                             height="220"
-                                            id="movie-sypnosis-trailer"
-                                            src="https://www.youtube.com/embed/TcMBFSGVi1c"
+                                            id="movie-synopsis-trailer"
+                                            src="https://www.youtube.com/embed/tXANCJQkUIE"
                                         >
                                         </iframe>
                                     </div>
                                     <div class="col-12">
                                         <b>Make a Booking:</b>
                                         <span class="badge badge-primary"
-                                            >Wed - Fri: 9pm</span
+                                            >Wed: 12pm (T12)</span
                                         >
                                         <span class="badge badge-primary"
-                                            >Sat - Sun: 6pm</span
+                                            >Thu: 12pm (T12)</span
+                                        >
+                                        <span class="badge badge-primary"
+                                            >Fri: 12pm (T12)</span
+                                        >
+                                        <span class="badge badge-primary"
+                                            >Sat: 9pm (T21)</span
+                                        >
+                                        <span class="badge badge-primary"
+                                            >Sun: 9pm (T21)</span
                                         >
                                     </div>
                                 </div>
@@ -747,16 +788,11 @@
                 </div>
             </section>
 
-            <div class="container min-vh-100">
-                <article id="Website Under Construction">
-                    <!-- Creative Commons image sourced from https://pixabay.com/en/maintenance-under-construction-2422173/ and used for educational purposes only -->
-                    <img
-                        src="./maintenance.png"
-                        alt="Website Under Construction"
-                        style="width: 100%;"
-                    />
-                </article>
-            </div>
+            <section id="booking">
+                <div class="container pt-3 pb-3 min-vh-100">
+                    <h1 style="color: #ffffff;">Avengers</h1>
+                </div>
+            </section>
         </main>
         /
 
@@ -829,7 +865,7 @@
                 ("0" + dt.getHours()).slice(-2) +
                 ":" +
                 ("0" + dt.getMinutes()).slice(-2);
-            const moviesList = ["AEG", "TEW", "DUM", "THP"];
+            const moviesList = ["ACT", "RMC", "ANM", "AHF"];
             function chooseMovie(id) {
                 moviesList.forEach((movie) => {
                     if (id == movie) {
