@@ -391,6 +391,7 @@
                                 <div class="col-md-6 col-sm-10 mb-3">
                                     <div
                                         class="card flex-row text-white"
+                                        id="moviePanelAEG"
                                         style="background-color: #2f2c34;"
                                     >
                                         <div class="card-header border-0">
@@ -427,6 +428,7 @@
                                 <div class="col-md-6 col-sm-10 mb-3">
                                     <div
                                         class="card flex-row text-white"
+                                        id="moviePanelTEW"
                                         style="background-color: #2f2c34;"
                                     >
                                         <div class="card-header border-0">
@@ -465,6 +467,7 @@
                                 <div class="col-md-6 col-sm-10 mb-3">
                                     <div
                                         class="card flex-row text-white"
+                                        id="moviePanelDUM"
                                         style="background-color: #2f2c34;"
                                     >
                                         <div class="card-header border-0">
@@ -500,6 +503,7 @@
                                 <div class="col-md-6 col-sm-10 mb-3">
                                     <div
                                         class="card flex-row text-white"
+                                        id="moviePanelTHP"
                                         style="background-color: #2f2c34;"
                                     >
                                         <div class="card-header border-0">
@@ -550,7 +554,7 @@
                             >
                                 <h2>Sypnosis</h2>
                             </div>
-                            <div class="card-body" id="AEG">
+                            <div class="card-body" id="synopsisAEG">
                                 <div class="row">
                                     <div class="col-md-6 mt-2">
                                         <div class="movie-detail">
@@ -597,7 +601,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-body d-none" id="TEW">
+                            <div class="card-body d-none" id="synopsisTEW">
                                 <div class="row">
                                     <div class="col-md-6 mt-2">
                                         <div class="movie-detail">
@@ -644,7 +648,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-body d-none" id="DUM">
+                            <div class="card-body d-none" id="synopsisDUM">
                                 <div class="row">
                                     <div class="col-md-6 mt-2">
                                         <div class="movie-detail">
@@ -691,7 +695,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-body d-none" id="THP">
+                            <div class="card-body d-none" id="synopsisTHP">
                                 <div class="row">
                                     <div class="col-md-6 mt-2">
                                         <div class="movie-detail">
@@ -829,10 +833,14 @@
             function chooseMovie(id) {
                 moviesList.forEach((movie) => {
                     if (id == movie) {
-                        var movieElement = document.getElementById(movie);
+                        var movieElement = document.getElementById(
+                            "synopsis" + movie
+                        );
                         movieElement.classList.remove("d-none");
                     } else {
-                        var movieElement = document.getElementById(movie);
+                        var movieElement = document.getElementById(
+                            "synopsis" + movie
+                        );
                         movieElement.classList.add("d-none");
                     }
                 });
