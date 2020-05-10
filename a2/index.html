@@ -765,19 +765,29 @@
                                     </div>
                                     <div class="col-12">
                                         <b>Make a Booking:</b>
-                                        <span class="badge badge-primary"
+                                        <span
+                                            class="badge badge-primary AHF"
+                                            onclick="bookMovie('AHF','Wed: 12pm (T12)')"
                                             >Wed: 12pm (T12)</span
                                         >
-                                        <span class="badge badge-primary"
+                                        <span
+                                            class="badge badge-primary AHF"
+                                            onclick="bookMovie('AHF','Thu: 12pm (T12)')"
                                             >Thu: 12pm (T12)</span
                                         >
-                                        <span class="badge badge-primary"
+                                        <span
+                                            class="badge badge-primary AHF"
+                                            onclick="bookMovie('AHF','Wed: 12pm (T12)')"
                                             >Fri: 12pm (T12)</span
                                         >
-                                        <span class="badge badge-primary"
+                                        <span
+                                            class="badge badge-primary AHF"
+                                            onclick="bookMovie('AHF','Wed: 12pm (T12)')"
                                             >Sat: 9pm (T21)</span
                                         >
-                                        <span class="badge badge-primary"
+                                        <span
+                                            class="badge badge-primary AHF"
+                                            onclick="bookMovie('AHF','Wed: 12pm (T12)')"
                                             >Sun: 9pm (T21)</span
                                         >
                                     </div>
@@ -790,11 +800,157 @@
 
             <section id="booking">
                 <div class="container pt-3 pb-3 min-vh-100">
-                    <h1 style="color: #ffffff;">Avengers</h1>
+                    <div
+                        class="d-flex rounded justify-content-center align-items-center mb-3"
+                        style="background-color: #e52729;"
+                    >
+                        <h1 style="color: #ffffff;">
+                            Avengers - Tue (T21) - 14.00
+                        </h1>
+                    </div>
+                    <div class="text-white">
+                        <form>
+                            <div class="form-row">
+                                <div class="col-md-6">
+                                    <h3 style="color: #ea4642;">Standard seatings</h3>
+                                    <div class="form-group">
+                                        <label for="seats-STA">Adults</label>
+                                        <input
+                                            type="number"
+                                            type="text"
+                                            class="form-control"
+                                            id="seats-STA"
+                                            name="seats[STA]"
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="seats-STP"
+                                            >Concession</label
+                                        >
+                                        <input
+                                            type="number"
+                                            class="form-control"
+                                            id="seats-STP"
+                                            name="seats[STP]"
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="seats-STC">Children</label>
+                                        <input
+                                            type="number"
+                                            class="form-control"
+                                            id="seats-STC"
+                                            name="seats[STC]"
+                                        />
+                                    </div>
+                                    <div
+                                        style="
+                                            margin-bottom: 5px;
+                                            height: 1.5px;
+                                            background-color: #eaeff5;
+                                        "
+                                    ></div>
+                                    <h3 style="color: #ea4642;">
+                                        First Class Seatings
+                                    </h3>
+                                    <div class="form-group">
+                                        <label for="seats-FCA">Adults</label>
+                                        <input
+                                            type="number"
+                                            type="text"
+                                            class="form-control"
+                                            id="seats-FCA"
+                                            name="seats[FCA]"
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="seats-FCP"
+                                            >Concession</label
+                                        >
+                                        <input
+                                            type="number"
+                                            class="form-control"
+                                            id="seats-FCP"
+                                            name="seats[FCP]"
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="seats-FCC">Children</label>
+                                        <input
+                                            type="number"
+                                            class="form-control"
+                                            id="seats-FCC"
+                                            name="seats[FCC]"
+                                        />
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-md-6 d-flex flex-column justify-content-center"
+                                >
+                                    <div class="form-group">
+                                        <label for="cust-name">Name</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="cust-name"
+                                            name="cust[name]"
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cust-email">Email</label>
+                                        <input
+                                            type="email"
+                                            class="form-control"
+                                            id="cust-email"
+                                            name="cust[email]"
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cust-mobile">Mobile</label>
+                                        <input
+                                            type="tel"
+                                            class="form-control"
+                                            id="cust-mobile"
+                                            name="cust[mobile]"
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cust-card"
+                                            >Credit Card</label
+                                        >
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="cust-card"
+                                            name="cust[card]"
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cust-expiry">Expiry</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="cust-expiry"
+                                            name="cust[expiry]"
+                                        />
+                                    </div>
+                                    <button
+                                        type="button"
+                                        class="btn btn-primary btn-lg"
+                                        style="
+                                            background-color: #e52729;
+                                            border-color: #e52729;
+                                        "
+                                    >
+                                        Order
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </section>
         </main>
-        /
 
         <footer class="" style="background-color: #242228;">
             <div class="container p-3" style="color: #ffffff;">
@@ -865,9 +1021,43 @@
                 ("0" + dt.getHours()).slice(-2) +
                 ":" +
                 ("0" + dt.getMinutes()).slice(-2);
-            const moviesList = ["ACT", "RMC", "ANM", "AHF"];
+
+            const movieIDs = ["ACT", "RMC", "ANM", "AHF"];
+
+            const moviesList = [
+                {
+                    id: "ACT",
+                    title: "Avengers: Endgame",
+                    day: [
+                        "Wed - 9pm (T21)",
+                        "Thu - 9pm (T21)",
+                        "Fri - 9pm (T21)",
+                        "Sat - 6pm (T18)",
+                    ],
+                    hour: [],
+                },
+                {
+                    id: "AHF",
+                    title: "The Happy Prince",
+                    day: [],
+                    hour: [],
+                },
+                {
+                    id: "ANM",
+                    title: "Dumbo",
+                    day: [],
+                    hour: [],
+                },
+                {
+                    id: "RMC",
+                    title: "Top End Wedding",
+                    day: [],
+                    hour: [],
+                },
+            ];
+
             function chooseMovie(id) {
-                moviesList.forEach((movie) => {
+                movieIDs.forEach((movie) => {
                     if (id == movie) {
                         var movieElement = document.getElementById(
                             "synopsis" + movie
@@ -881,6 +1071,16 @@
                     }
                 });
             }
+
+            function bookMovie(id, time) {
+                console.log(id);
+                console.log(time);
+            }
+
+            // var bookings = document.getElementsByClassName("badge badge-primary")
+            // Array.from(bookings).forEach(element => {
+            //     element.addEventListener('click', bookMovie)
+            // })
         </script>
 
         <script src="../wireframe.js"></script>
