@@ -1024,6 +1024,7 @@
                                     <div class="form-group">
                                         <label for="cust-name">Name</label>
                                         <input
+                                            required
                                             type="text"
                                             class="form-control"
                                             id="cust-name"
@@ -1055,7 +1056,7 @@
                                             >Credit Card</label
                                         >
                                         <input
-                                            pattern="^(\(04\)|04|\+614)( ?\d){8}$"
+                                            pattern="^(\d{4}[- ]){3}\d{4}|\d{16}$"
                                             type="text"
                                             class="form-control"
                                             id="cust-card"
