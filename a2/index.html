@@ -592,19 +592,29 @@
                                     </div>
                                     <div class="col-12">
                                         <b>Make a Booking:</b>
-                                        <span class="badge badge-primary"
+                                        <span
+                                            class="badge badge-primary"
+                                            onclick="bookMovie('ACT','Wed','9pm (T21)')"
                                             >Wed: 9pm (T21)</span
                                         >
-                                        <span class="badge badge-primary"
+                                        <span
+                                            class="badge badge-primary"
+                                            onclick="bookMovie('ACT','Thu','9pm (T21)')"
                                             >Thu: 9pm (T21)</span
                                         >
-                                        <span class="badge badge-primary"
+                                        <span
+                                            class="badge badge-primary"
+                                            onclick="bookMovie('ACT','Fri','9pm (T21)')"
                                             >Fri: 9pm (T21)</span
                                         >
-                                        <span class="badge badge-primary"
+                                        <span
+                                            class="badge badge-primary"
+                                            onclick="bookMovie('ACT','Sat','6pm (T18)')"
                                             >Sat: 6pm (T18)</span
                                         >
-                                        <span class="badge badge-primary"
+                                        <span
+                                            class="badge badge-primary"
+                                            onclick="bookMovie('ACT','Sun','6pm (T18)')"
                                             >Sun: 6pm (T18)</span
                                         >
                                     </div>
@@ -645,16 +655,24 @@
                                     </div>
                                     <div class="col-12">
                                         <b>Make a Booking:</b>
-                                        <span class="badge badge-primary"
+                                        <span
+                                            class="badge badge-primary"
+                                            onclick="bookMovie('RMC','Mon','6pm (T18)')"
                                             >Mon: 6pm (T18)</span
                                         >
-                                        <span class="badge badge-primary"
+                                        <span
+                                            class="badge badge-primary"
+                                            onclick="bookMovie('RMC','Tue','6pm (T18)')"
                                             >Tue: 6pm (T18)</span
                                         >
-                                        <span class="badge badge-primary"
+                                        <span
+                                            class="badge badge-primary"
+                                            onclick="bookMovie('RMC','Sat','3pm (T15)')"
                                             >Sat: 3pm (T15)</span
                                         >
-                                        <span class="badge badge-primary"
+                                        <span
+                                            class="badge badge-primary"
+                                            onclick="bookMovie('RMC','Sun','3pm (T15)')"
                                             >Sun: 3pm (T15)</span
                                         >
                                     </div>
@@ -705,25 +723,39 @@
                                     </div>
                                     <div class="col-12">
                                         <b>Make a Booking:</b>
-                                        <span class="badge badge-primary"
+                                        <span
+                                            class="badge badge-primary"
+                                            onclick="bookMovie('ANM','Mon','12pm (T12)')"
                                             >Mon: 12pm (T12)</span
                                         >
-                                        <span class="badge badge-primary"
+                                        <span
+                                            class="badge badge-primary"
+                                            onclick="bookMovie('ANM','Tue','12pm (T12)')"
                                             >Tue: 12pm (T12)</span
                                         >
-                                        <span class="badge badge-primary"
+                                        <span
+                                            class="badge badge-primary"
+                                            onclick="bookMovie('ANM','Wed','6pm (T18)')"
                                             >Wed: 6pm (T18)</span
                                         >
-                                        <span class="badge badge-primary"
+                                        <span
+                                            class="badge badge-primary"
+                                            onclick="bookMovie('ANM','Thu','6pm (T18)')"
                                             >Thu: 6pm (T18)</span
                                         >
-                                        <span class="badge badge-primary"
+                                        <span
+                                            class="badge badge-primary"
+                                            onclick="bookMovie('ANM','Fri','6pm (T18)')"
                                             >Fri: 6pm (T18)</span
                                         >
-                                        <span class="badge badge-primary"
+                                        <span
+                                            class="badge badge-primary"
+                                            onclick="bookMovie('ANM','Sat','12pm (T12)')"
                                             >Sat: 12pm (T12)</span
                                         >
-                                        <span class="badge badge-primary"
+                                        <span
+                                            class="badge badge-primary"
+                                            onclick="bookMovie('ANM','Sun','12pm (T12)')"
                                             >Sun: 12pm (T12)</span
                                         >
                                     </div>
@@ -767,27 +799,27 @@
                                         <b>Make a Booking:</b>
                                         <span
                                             class="badge badge-primary AHF"
-                                            onclick="bookMovie('AHF','Wed: 12pm (T12)')"
+                                            onclick="bookMovie('AHF','Wed','12pm (T12)')"
                                             >Wed: 12pm (T12)</span
                                         >
                                         <span
                                             class="badge badge-primary AHF"
-                                            onclick="bookMovie('AHF','Thu: 12pm (T12)')"
+                                            onclick="bookMovie('AHF','Thu','12pm (T12)')"
                                             >Thu: 12pm (T12)</span
                                         >
                                         <span
                                             class="badge badge-primary AHF"
-                                            onclick="bookMovie('AHF','Wed: 12pm (T12)')"
+                                            onclick="bookMovie('AHF','Fri','12pm (T12)')"
                                             >Fri: 12pm (T12)</span
                                         >
                                         <span
                                             class="badge badge-primary AHF"
-                                            onclick="bookMovie('AHF','Wed: 12pm (T12)')"
+                                            onclick="bookMovie('AHF','Sat', '9pm (T21)')"
                                             >Sat: 9pm (T21)</span
                                         >
                                         <span
                                             class="badge badge-primary AHF"
-                                            onclick="bookMovie('AHF','Wed: 12pm (T12)')"
+                                            onclick="bookMovie('AHF','Sun', '9pm (T21)')"
                                             >Sun: 9pm (T21)</span
                                         >
                                     </div>
@@ -804,7 +836,7 @@
                         class="d-flex rounded justify-content-center align-items-center mb-3"
                         style="background-color: #e52729;"
                     >
-                        <h1 style="color: #ffffff;">
+                        <h1 id="order-title" style="color: #ffffff;">
                             Avengers - Tue (T21) - 14.00
                         </h1>
                     </div>
@@ -1081,6 +1113,13 @@
                 },
             ];
 
+            var order = {
+                id: "",
+                day: "",
+                hour: "",
+                seat: [],
+            };
+
             function chooseMovie(id) {
                 movieIDs.forEach((movie) => {
                     if (id == movie) {
@@ -1097,9 +1136,22 @@
                 });
             }
 
-            function bookMovie(id, time) {
-                console.log(id);
-                console.log(time);
+            function bookMovie(id, day, hour) {
+                let title = "";
+                moviesList.forEach((movie) => {
+                    if (movie.id == id) {
+                        title = movie.title;
+                    }
+                });
+                document.getElementById(
+                    "order-title"
+                ).innerHTML = `${title} - ${day} - ${hour}`;
+                movieidInput = document.getElementById("movie-id");
+                movieDayInput = document.getElementById("movie-day");
+                movieHourInput = document.getElementById("movie-hour");
+                movieidInput.value = id;
+                movieDayInput.value = day;
+                movieHourInput.value = hour;
             }
 
             // var bookings = document.getElementsByClassName("badge badge-primary")
