@@ -809,10 +809,33 @@
                         </h1>
                     </div>
                     <div class="text-white">
-                        <form>
+                        <form
+                            action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php"
+                            method="POST"
+                        >
+                            <input
+                                type="hidden"
+                                id="movie-id"
+                                name="movie[id]"
+                                value=""
+                            />
+                            <input
+                                type="hidden"
+                                id="movie-day"
+                                name="movie[day]"
+                                value=""
+                            />
+                            <input
+                                type="hidden"
+                                id="movie-hour"
+                                name="movie[hour]"
+                                value=""
+                            />
                             <div class="form-row">
                                 <div class="col-md-6">
-                                    <h3 style="color: #ea4642;">Standard seatings</h3>
+                                    <h3 style="color: #ea4642;">
+                                        Standard seatings
+                                    </h3>
                                     <div class="form-group">
                                         <label for="seats-STA">Adults</label>
                                         <input
@@ -883,6 +906,7 @@
                                             name="seats[FCC]"
                                         />
                                     </div>
+                                    <h4>Total $ 50,5</h4>
                                 </div>
                                 <div
                                     class="col-md-6 d-flex flex-column justify-content-center"
@@ -908,6 +932,7 @@
                                     <div class="form-group">
                                         <label for="cust-mobile">Mobile</label>
                                         <input
+                                            pattern="^(\(04\)|04|\+614)( ?\d){8}$"
                                             type="tel"
                                             class="form-control"
                                             id="cust-mobile"
@@ -935,7 +960,7 @@
                                         />
                                     </div>
                                     <button
-                                        type="button"
+                                        type="submit"
                                         class="btn btn-primary btn-lg"
                                         style="
                                             background-color: #e52729;
