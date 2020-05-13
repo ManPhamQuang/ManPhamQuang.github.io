@@ -1,0 +1,51 @@
+/* Insert your styles here */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+}
+
+h1 {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#prices {
+    background-color: #2f2c34;
+}
+
+.accentColor {
+    color: #e52729;
+}
+
+#navbar {
+    background-color: #e52729;
+}
+
+.parallax {
+    background-image: url("adult-bar-cafe-business-cinema-375885.jpg");
+
+    /* Set a specific height */
+    height: 100%;
+    width: 100vw;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carousel-item img {
+    height: 100vh;
+}
+
+.card-poster {
+    height: 200px;
+    width: 150px;
+    object-fit: cover;
+}
+
+footer p {
+    margin: 0;
+}
