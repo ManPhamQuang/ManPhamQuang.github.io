@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include 'tools.php'?>
+        
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Assignment 2</title>
@@ -31,6 +31,8 @@
     </head>
 
     <body data-spy="scroll" data-target=".navbar" data-offset="100">
+        <!-- PHP validation code -->
+        
         <!-- Header -->
         <header>
             <nav class="navbar navbar-dark bg-dark">
@@ -842,9 +844,12 @@
                         </h1>
                     </div>
                     <div class="text-white">
+                        <?php include 'form.php' ?>
                         <form
-                            action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php"
-                            method="POST"
+                            id="the-form"
+                            name="the-form"    
+                            method="post" 
+                            action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"
                         >
                             <input
                                 type="hidden"
@@ -1025,18 +1030,17 @@
                                     <div class="form-group">
                                         <label for="cust-name">Name</label>
                                         <input
-                                            required
                                             type="text"
                                             class="form-control"
                                             id="cust-name"
                                             name="cust[name]"
-                                            pattern="^[a-zA-Z \-.']{1,100}$"
                                         />
+                                        <span class="error">* <?php echo $nameErr;?></span>
                                     </div>
                                     <div class="form-group">
                                         <label for="cust-email">Email</label>
                                         <input
-                                            type="email"
+                                            type="text"
                                             class="form-control"
                                             id="cust-email"
                                             name="cust[email]"
@@ -1045,7 +1049,6 @@
                                     <div class="form-group">
                                         <label for="cust-mobile">Mobile</label>
                                         <input
-                                            pattern="^(\(04\)|04|\+614)( ?\d){8}$"
                                             type="tel"
                                             class="form-control"
                                             id="cust-mobile"
@@ -1057,7 +1060,6 @@
                                             >Credit Card</label
                                         >
                                         <input
-                                            pattern="^(\d{4}[- ]){3}\d{4}|\d{16}$"
                                             type="text"
                                             class="form-control"
                                             id="cust-card"
@@ -1131,6 +1133,7 @@
                 </div>
             </div>
         </footer>
+         
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script
             src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -1325,10 +1328,7 @@
                 }
             }
         </script>
-        <?php
-            preShow($_POST);
-            printMyCode();
-        ?>
+        
         <script src="../wireframe.js"></script>
     </body>
 </html>
