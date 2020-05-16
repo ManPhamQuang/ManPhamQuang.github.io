@@ -1080,7 +1080,9 @@
                                             class="form-control"
                                             id="cust-expiry"
                                             name="cust[expiry]"
+                                            value="<?= isset($_POST['cust']['expiry']) ? $_POST['cust']['expiry'] : ''; ?>"
                                         />
+                                        <span class="error">* <?php echo $expiryErr;?></span>
                                     </div>
                                     <span class="error"><?php echo $seatsErr;?></span> 
                                     <button
@@ -1364,8 +1366,9 @@
                 echo '<script type="text/javascript">chooseMovie(' . "'" . $_POST['movie']['id'] . "'" . ')</script>';
                 echo '<script type="text/javascript">bookMovie(' . "'" . $_POST['movie']['id'] . "', '" . $_POST['movie']['day'] . "', '". $_POST['movie']['hour'] . "'" .')</script>'; 
             }
+            preShow($_POST);
+            echo date('Y-m')
         ?>
-        
         <script src="../wireframe.js"></script>
     </body>
 </html>

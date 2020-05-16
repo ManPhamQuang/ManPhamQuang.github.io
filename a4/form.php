@@ -41,6 +41,11 @@
                             $cardErr = "Invalid card format";
                         }
                     }
+                    if($sub_key == "expiry"){
+                        if(date('Y-m') == $expiry){
+                            $expiryErr = "Expiry date cannot be within a month of the purchase date";
+                        }
+                    }
                     
                     // if($nameErr || $emailErr || $mobileErr || $cardErr){
                         
