@@ -1,20 +1,22 @@
+<!DOCTYPE HTML>  
+<html>
+<head>
+<style>
+   .error {color: #FF0000;}
+</style>
+</head>
+<body>  
 <?php 
     include 'tools.php';
-    // preShow($_POST);
-    // $test = "wut";
-    // $$test = "yea";
-    // echo $wut;
+    if(array_sum($_POST['seats']) == 0) {
+        $seatsErr = "* Please select at least one seat";
+    }
     foreach ($_POST as $key => $value){
         foreach ($_POST[$key] as $sub_key => $value){
-            // sub_key is the individual input fields that user submit in the form
-            // echo "this is the big key: " . $key;
-            // echo "<br>";
-            // echo $sub_key . ": " . $value;
-            // echo "<br>";
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if (empty($_POST[$key][$sub_key])) {
+                    // adding error field is required
                     $ErrVarName = $sub_key . "Err";
-                    // $nameErr = "Name is required";
                     $$ErrVarName = $sub_key . " is required";
                 } else {
                     $$sub_key = test_input($_POST[$key][$sub_key]);
@@ -39,23 +41,16 @@
                             $cardErr = "Invalid card format";
                         }
                     }
+                    
+                    // if($nameErr || $emailErr || $mobileErr || $cardErr){
+                        
+                    // }else{
+                    //     echo 'do some shit';
+                    // }
                 }
             }
         }
     }
-    // define variables and set to empty values
-    // $name = $email = $mobile = $card = $expiry = $STA = $STP = $STC = $FCA = $FCP = $FCC = $id = $day = $hour = "";
-    // VALIDATING INPUT DATA
-    // if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    //     if (empty($_POST["cust"]["name"])) {
-    //         $nameErr = "Name is required";
-    //     } else {
-    //         $name = test_input($_POST["cust"]["name"]);
-    //         if (!preg_match("/^[a-zA-Z ]*$/", $name)){
-    //             $nameErr = "Only letters and whitespace are allowed.";
-    //         }
-    //     }
-    // }
 
     function test_input($data) {
         $data = trim($data);
@@ -63,9 +58,10 @@
         $data = htmlspecialchars($data);
         return $data;
     }
-    // preShow($nameErr);
-    // preShow($emailErr);
-    // preShow($mobileErr);
-    // preShow($cardErr);
+    // preShow($_POST);
+    // session_start()
+
 
 ?>
+</body>
+</html>

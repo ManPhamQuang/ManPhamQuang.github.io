@@ -855,19 +855,19 @@
                                 type="hidden"
                                 id="movie-id"
                                 name="movie[id]"
-                                value=""
+                                value="<?= isset($_POST['movie']['id']) ? $_POST['movie']['id'] : ''; ?>"
                             />
                             <input
                                 type="hidden"
                                 id="movie-day"
                                 name="movie[day]"
-                                value=""
+                                value="<?= isset($_POST['movie']['day']) ? $_POST['movie']['day'] : ''; ?>"
                             />
                             <input
                                 type="hidden"
                                 id="movie-hour"
                                 name="movie[hour]"
-                                value=""
+                                value="<?= isset($_POST['movie']['hour']) ? $_POST['movie']['hour'] : ''; ?>"
                             />
                             <div class="form-row">
                                 <div class="col-md-6">
@@ -1034,6 +1034,7 @@
                                             class="form-control"
                                             id="cust-name"
                                             name="cust[name]"
+                                            value="<?= isset($_POST['cust']['name']) ? $_POST['cust']['name'] : ''; ?>"
                                         />
                                         <span class="error">* <?php echo $nameErr;?></span>
                                     </div>
@@ -1044,7 +1045,9 @@
                                             class="form-control"
                                             id="cust-email"
                                             name="cust[email]"
+                                            value="<?= isset($_POST['cust']['email']) ? $_POST['cust']['email'] : ''; ?>"
                                         />
+                                        <span class="error">* <?php echo $emailErr;?></span>
                                     </div>
                                     <div class="form-group">
                                         <label for="cust-mobile">Mobile</label>
@@ -1053,7 +1056,9 @@
                                             class="form-control"
                                             id="cust-mobile"
                                             name="cust[mobile]"
+                                            value="<?= isset($_POST['cust']['mobile']) ? $_POST['cust']['mobile'] : ''; ?>"
                                         />
+                                        <span class="error">* <?php echo $mobileErr;?></span>
                                     </div>
                                     <div class="form-group">
                                         <label for="cust-card"
@@ -1064,7 +1069,9 @@
                                             class="form-control"
                                             id="cust-card"
                                             name="cust[card]"
+                                            value="<?= isset($_POST['cust']['card']) ? $_POST['cust']['card'] : ''; ?>"
                                         />
+                                        <span class="error">* <?php echo $cardErr;?></span>
                                     </div>
                                     <div class="form-group">
                                         <label for="cust-expiry">Expiry</label>
@@ -1075,7 +1082,9 @@
                                             name="cust[expiry]"
                                         />
                                     </div>
+                                    <span class="error"><?php echo $seatsErr;?></span> 
                                     <button
+                                        id="submit-button"
                                         type="submit"
                                         class="btn btn-primary btn-lg"
                                         style="
@@ -1150,6 +1159,16 @@
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"
         ></script>
+        <?php 
+            // creating the seats selected object using php instead of js to retain seats selected value if validation fail
+            if(!empty($_POST['seats'])){
+                php2js($_POST['seats'], "seatsSelected");
+            }else{
+                echo "<script type='text/javascript'>
+                    var seatsSelected = {};
+                </script>";
+            }
+        ?>
         <script>
             // for date
             var dt = new Date();
@@ -1220,12 +1239,13 @@
             }
 
             var seats = ["STA", "STP", "STC", "FCA", "FCP", "FCC"];
-            var seatsSelected = {};
+            // var seatsSelected = {};
+
             // var total = 0;
             seats.forEach((seatID) => {
                 let seatElement = document.getElementById(`seats-${seatID}`);
                 seatElement.addEventListener("change", function () {
-                    seatsSelected[seatElement.id] = seatElement.value;
+                    seatsSelected[seatElement.id.replace("seats-", "")] = seatElement.value;
                     calculateTotal();
                 });
             });
@@ -1253,7 +1273,7 @@
                 console.log(time);
 
                 switch (seat) {
-                    case "seats-STA":
+                    case "STA":
                         if (
                             date == "MON" ||
                             date == "WED" ||
@@ -1265,7 +1285,7 @@
                         } else {
                             return 19.8;
                         }
-                    case "seats-STP":
+                    case "STP":
                         if (
                             date == "MON" ||
                             date == "WED" ||
@@ -1277,7 +1297,7 @@
                         } else {
                             return 17.5;
                         }
-                    case "seats-STC":
+                    case "STC":
                         if (
                             date == "MON" ||
                             date == "WED" ||
@@ -1289,7 +1309,7 @@
                         } else {
                             return 15.3;
                         }
-                    case "seats-FCA":
+                    case "FCA":
                         if (
                             date == "MON" ||
                             date == "WED" ||
@@ -1301,7 +1321,7 @@
                         } else {
                             return 30;
                         }
-                    case "seats-FCP":
+                    case "FCP":
                         if (
                             date == "MON" ||
                             date == "WED" ||
@@ -1313,7 +1333,7 @@
                         } else {
                             return 27;
                         }
-                    case "seats-FCC":
+                    case "FCC":
                         if (
                             date == "MON" ||
                             date == "WED" ||
@@ -1328,6 +1348,23 @@
                 }
             }
         </script>
+        <script type="text/javascript">
+            // for retaining value of select fields if validation fails
+            document.getElementById('seats-STA').value = "<?php echo $_POST['seats']['STA'];?>";
+            document.getElementById('seats-STP').value = "<?php echo $_POST['seats']['STP'];?>";
+            document.getElementById('seats-STC').value = "<?php echo $_POST['seats']['STC'];?>";
+            document.getElementById('seats-FCA').value = "<?php echo $_POST['seats']['FCA'];?>";
+            document.getElementById('seats-FCP').value = "<?php echo $_POST['seats']['FCP'];?>";
+            document.getElementById('seats-FCC').value = "<?php echo $_POST['seats']['FCC'];?>";
+            // for retaining value of movie fields if validation fails
+            // console.log() 
+        </script>
+        <?php 
+            if(!empty($_POST['movie']['id'])){
+                echo '<script type="text/javascript">chooseMovie(' . "'" . $_POST['movie']['id'] . "'" . ')</script>';
+                echo '<script type="text/javascript">bookMovie(' . "'" . $_POST['movie']['id'] . "', '" . $_POST['movie']['day'] . "', '". $_POST['movie']['hour'] . "'" .')</script>'; 
+            }
+        ?>
         
         <script src="../wireframe.js"></script>
     </body>
