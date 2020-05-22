@@ -1,10 +1,12 @@
+<?php 
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Assignment 2</title>
+        <title>Assignment 4</title>
 
         <!-- Keep wireframe.css for debugging, add your css to style.css -->
         <link
@@ -1359,17 +1361,20 @@
             document.getElementById('seats-FCP').value = "<?php echo $_POST['seats']['FCP'];?>";
             document.getElementById('seats-FCC').value = "<?php echo $_POST['seats']['FCC'];?>";
             // for retaining value of movie fields if validation fails
-            // console.log() 
         </script>
         <?php 
             if(!empty($_POST['movie']['id'])){
                 echo '<script type="text/javascript">chooseMovie(' . "'" . $_POST['movie']['id'] . "'" . ')</script>';
                 echo '<script type="text/javascript">bookMovie(' . "'" . $_POST['movie']['id'] . "', '" . $_POST['movie']['day'] . "', '". $_POST['movie']['hour'] . "'" .')</script>'; 
             }
-            preShow($_POST);
-            echo date('Y-m')
+            
         ?>
         <script src="../wireframe.js"></script>
     </body>
 </html>
 
+<?php
+    if (isset($_SESSION['booking'])) {
+        header('location: form.php');
+    }
+?>

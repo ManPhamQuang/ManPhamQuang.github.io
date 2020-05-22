@@ -1,5 +1,5 @@
 <?php
-    // session_start();
+    session_start();
     function preShow( $arr, $returnAsString=false ) {
     $ret  = '<pre>' . print_r($arr, true) . '</pre>';
     if ($returnAsString)
@@ -24,6 +24,16 @@
     if (isset($_POST['session-reset'])) {
         foreach($_SESSION as $something => &$whatever) {
             unset($whatever);
+        }
+    }
+    function outputCsv($fileName, $assocDataArray){
+        if(isset($assocDataArray['0'])){
+            $fp = fopen($fileName, 'w');
+            fputcsv($fp, array_keys($assocDataArray['0']));
+            foreach($assocDataArray AS $values){
+                fputcsv($fp, $values);
+            }
+            fclose($fp);
         }
     }
 
