@@ -1,0 +1,103 @@
+@media print {
+    .done-button-container {
+        display: none;
+    }
+    #tickets {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+    .ticket {
+        box-sizing: border-box;
+        width: 45mm;
+        height: 30mm;
+        margin: 15mm auto 0;
+        padding: 1mm;
+        border-radius: 1mm;
+        background: #fbfbfb;
+        /* box-shadow: 2px 2px 15px 0px #ab9b0d; */
+    }
+
+    .ticket__content {
+        padding: 1mm;
+        background-color: #fcd000;
+        -webkit-print-color-adjust: exact;
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        border: 6px solid #d8d8d8;
+    }
+
+    .ticket__text {
+        width: 40mm;
+        font-family: "Helvetica", "Arial", sans-serif;
+        font-size: 1rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: #dae9e9;
+        /* transform: translate(-25px, 25px) rotate(-55deg); */
+    }
+
+    p {
+        margin: 0px;
+    }
+}
+body {
+    /* background-color: #fcd000; */
+}
+
+#tickets {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.ticket {
+    box-sizing: border-box;
+    width: 45mm;
+    height: 30mm;
+    margin: 15mm auto 0;
+    padding: 1mm;
+    border-radius: 1mm;
+    background: #fbfbfb;
+    /* box-shadow: 2px 2px 15px 0px #ab9b0d; */
+}
+
+.ticket__content {
+    padding: 1mm;
+    background-color: #fcd000;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    border: 6px solid #d8d8d8;
+}
+
+.ticket__text {
+    width: 40mm;
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #dae9e9;
+    /* transform: translate(-25px, 25px) rotate(-55deg); */
+}
+
+p {
+    margin: 0px;
+}
+
+.done-button-container {
+    margin: 10px;
+}
+
+.button {
+    cursor: pointer;
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    color: #555;
+}
+
+.button:hover {
+    background-color: #e52729;
+    color: white;
+}

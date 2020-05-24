@@ -28,7 +28,19 @@
             font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
             color: #555;
         }
-        
+        button{
+            cursor: pointer;
+            border: 1px solid #eee;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+            font-size: 16px;
+            line-height: 24px;
+            font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+            color: #555;
+        }
+        button:hover{
+            background-color: #e52729;
+            color:white;
+        }
         .invoice-box table {
             width: 100%;
             line-height: inherit;
@@ -97,6 +109,9 @@
     }
 
     @media print {
+        button{
+            display: none;
+        }
         @page {
             size: A4; /* DIN A4 standard, Europe */
             margin:0;
@@ -295,6 +310,9 @@
                 </td>
             </tr>
         </table>
+        <form action="tickets.php" method="post">
+            <button type="submit">Print tickets</button>
+        </form>
     </div>
 </body>
 </html>
