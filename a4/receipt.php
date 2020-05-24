@@ -14,7 +14,7 @@
         /// your code here
         $order = $_SESSION['booking'];
         // outputCsv('orders.csv', $order['cust']);
-        $file = fopen('orders.csv', 'w');
+        $file = fopen('orders.csv', 'a');
         // fputcsv($file, $oder['name'], '    ');
         fputcsv($file, $order['cust'], "\t");
         // foreach($order as $field){
