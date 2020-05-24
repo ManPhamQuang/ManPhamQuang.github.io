@@ -12,6 +12,10 @@
         if(array_sum($_POST['seats']) == 0) {
             $seatsErr = "* Please select at least one seat";
         }
+        
+        if($_POST['movie']['hour'] == ''){
+            $movieErr = "* Please select a movie and a time";
+        }
         foreach ($_POST as $key => $value){
             foreach ($_POST[$key] as $sub_key => $value){
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -51,7 +55,7 @@
                 }
             }
         }
-        if(isset($nameErr) || isset($emailErr) || isset($mobileErr) || isset($cardErr) || isset($expiryErr) || isset($seatsErr)){
+        if(isset($nameErr) || isset($emailErr) || isset($mobileErr) || isset($cardErr) || isset($expiryErr) || isset($seatsErr) || isset($movieErr)){
             // returns to index.php if error detected
         }else{
             $_SESSION["booking"] = $_POST;

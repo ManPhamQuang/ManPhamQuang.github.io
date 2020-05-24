@@ -871,6 +871,12 @@
                                 name="movie[hour]"
                                 value="<?= isset($_POST['movie']['hour']) ? $_POST['movie']['hour'] : ''; ?>"
                             />
+                            <input
+                                type="hidden"
+                                id="seats-total"
+                                name="seats[total]"
+                                value="<?= isset($_POST['seats']['total']) ? $_POST['seats']['total'] : ''; ?>"
+                            />
                             <div class="form-row">
                                 <div class="col-md-6">
                                     <h3 style="color: #ea4642;">
@@ -1086,6 +1092,7 @@
                                         />
                                         <span class="error">* <?php echo $expiryErr;?></span>
                                     </div>
+                                    <span class="error"><?php echo $movieErr;?></span> 
                                     <span class="error"><?php echo $seatsErr;?></span> 
                                     <button
                                         id="submit-button"
@@ -1267,6 +1274,7 @@
                 document.getElementById(
                     "order-total"
                 ).innerHTML = `Total $ ${total}`;
+            document.getElementById('seats-total').value = total; 
             }
 
             function calculateSeatPrice(seat) {
@@ -1373,8 +1381,3 @@
     </body>
 </html>
 
-<?php
-    if (isset($_SESSION['booking'])) {
-        header('location: form.php');
-    }
-?>
